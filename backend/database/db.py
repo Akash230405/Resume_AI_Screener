@@ -1,8 +1,6 @@
 from pymongo import MongoClient
-
-client = MongoClient(
-    "mongodb+srv://resumeadmin:ResumeAI123@cluster0resumeaicluster.wwfdp72.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0ResumeAICluster"
-)
+import os
+client = MongoClient(os.getenv("MONGO_URI"))
 
 try:
     client.admin.command("ping")
