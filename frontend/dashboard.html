@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume AI Screener</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Resume AI Screener</h1>
+
+        <form id="resumeForm">
+
+            <input
+                type="file"
+                id="resume"
+                required
+            >
+
+            <textarea
+                id="jobDescription"
+                placeholder="Enter Job Description"
+                rows="8"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </div>
+    <hr>
+<hr>
+
+<h2>Analytics Dashboard</h2>
+
+<button onclick="loadAnalytics()">
+    Load Analytics
+</button>
+
+<div id="analytics"></div>
+
+
+<h2>Candidate Rankings</h2>
+
+<button onclick="loadCandidates()">
+    Load Candidates
+</button>
+
+<table border="1" width="100%" id="candidateTable">
+
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Resume</th>
+            <th>Score</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+</table>
+<hr>
+
+<h2>Candidate Details</h2>
+
+<div id="candidateDetails">
+
+</div>
+<script src="js/app.js"></script>
+
+</body>
+</html>
